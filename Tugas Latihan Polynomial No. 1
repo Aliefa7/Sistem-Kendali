@@ -74,3 +74,9 @@ k2 =
 p =
 
      1    -3    78
+
+>> % ubah ke matriks polynomial
+>> sym = poly2sym(p)
+sym =
+ 
+x^2 - 3*x + 78
