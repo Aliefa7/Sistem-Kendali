@@ -1,0 +1,42 @@
+>> % p1(s) = s^3 + 5*s^2 + 3*s + 10
+>> % p2(s) = s^4 + 7*s^3 + 5*s^2 + 8*s + 15
+>> % p3(s) = s^5 + 15*s^4 + 10*s^3 + 6*s^2 + 3*s + 9
+>> % Tentukan p1 dan p2 s = 2, p3 s = 3
+>> % soal p1
+>> p1 = [ 1 5 3 10 ]
+
+p1 =
+
+     1     5     3    10
+
+>> pvalue = polyval(p1,2)
+
+pvalue =
+
+    44
+
+>> % soal p2
+>> p2 = [ 1 7 5 8 15 ]
+
+p2 =
+
+     1     7     5     8    15
+
+>> pvalue = polyval(p2,2)
+
+pvalue =
+
+   123
+
+>> % soal p3
+>> p3 = [ 1 15 10 6 3 9 ]
+
+p3 =
+
+     1    15    10     6     3     9
+
+>> pvalue = polyval(p3,3)
+
+pvalue =
+
+        1800
