@@ -1,0 +1,59 @@
+>> syms x
+ p1(x) = x^5 + 2*x^4 - 3*x^3 + 7*x^2 - 8*x + 7;
+ p2(x) = x^4 + 3*x^3 - 5*x^2 + 9*x + 11;
+ p3(x) = x^3 - 2*x^2 - 3*x + 9;
+ p4(x) = x^2 - 5*x + 13;
+ p5(x) = x + 5;
+ 
+>> % ubah ke vektor
+>> polyp1 = sym2poly(p1)
+polyp1 =
+
+     1     2    -3     7    -8     7
+
+>> polyp2 = sym2poly(p2)
+polyp2 =
+
+     1     3    -5     9    11
+
+>> polyp3 = sym2poly(p3)
+polyp3 =
+
+     1    -2    -3     9
+
+>> polyp4 = sym2poly(p4)
+polyp4 =
+
+     1    -5    13
+
+>> polyp5 = sym2poly(p5)
+polyp5 =
+
+     1     5
+
+
+>> % masukan nilai variabel x = 2
+>> pvaluep1 = polyval(polyp1,2)
+pvaluep1 =
+
+    59
+
+>> pvaluep2 = polyval(polyp2,2)
+pvaluep2 =
+
+    49
+
+>> pvaluep3 = polyval(polyp3,2)
+pvaluep3 =
+
+     3
+
+>> pvaluep4 = polyval(polyp4,2)
+pvaluep4 =
+
+     7
+
+>> pvaluep5 = polyval(polyp5,2)
+pvaluep5 =
+
+     7
