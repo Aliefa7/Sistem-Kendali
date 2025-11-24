@@ -1,0 +1,27 @@
+>> % p(s) = ( 3*s^2 + 2*s + 1 ) * ( s + 4 ) = p(s) = 3*s^3 + 14*s^2 + 9*s + 4
+>> % menghitung perkalian dengan menggunakan fungsi conv()
+>> p = [3 2 1]
+
+p =
+
+     3     2     1
+
+>> q = [1 4]
+
+q =
+
+     1     4
+
+>> n = conv(p,q)
+
+n =
+
+     3    14     9     4
+
+>> p_val = polyval(n,-5)
+
+p_val =
+
+   -66
+
+>> 
