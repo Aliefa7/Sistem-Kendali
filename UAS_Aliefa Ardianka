@@ -37,15 +37,291 @@ int_y =
 
 
 >> % --- NOMOR 3 ---
+>> K = 2;
+>> T = 3;
+>> num = [ K ];
+>> den = [ T, 1 ];
+>> H = tf(num,den)
+H =
+ 
+     2
+  -------
+  3 s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+
 
 >> % --- NOMOR 4 ---
+>> num = [1, 1];       
+den = [1, -1, 3]; 
+H = tf(num, den)
+H =
+ 
+     s + 1
+  -----------
+  s^2 - s + 3
+ 
+Continuous-time transfer function.
+Model Properties
+>> t = [0:0.01:10];
+>> step(H,t)
+>> grid on
+>> xlabel('Time (seconds)')
+
 
 >> % --- NOMOR 5 ---
+>> BAGIAN 0.2
+>> num = [ 0.2 ];
+>> den = [ 1 0 ];
+>> H = tf(num,den)
+H =
+ 
+  0.2
+  ---
+   s
+ 
+Continuous-time transfer function.
+Model Properties
+>> pole(H)
+ans =
+
+     0
+
+>> step(H)
+>> grid on
+
+>> Bagian 1
+> num = [ 1 ];
+>> den = [ 1 0 ];
+>> H = tf(num,den)
+H =
+ 
+  1
+  -
+  s
+ 
+Continuous-time transfer function.
+Model Properties
+>> pole(H)
+ans =
+
+     0
+
+>> Bagiian 5
+>> num = [ 5 ];
+>> den = [ 1 0 ];
+>> H = tf(num,den)
+H =
+ 
+  5
+  -
+  s
+ 
+Continuous-time transfer function.
+Model Properties
+>> pole(H)
+ans =
+
+     0
+
+>> step(H)
+>> grid on
+
 
 >> % --- NOMOR 6 ---
+>> BAGIAN K (0.5)
+>> H = tf([0.5], [1,1])
+H =
+ 
+   0.5
+  -----
+  s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> Bagian K (1)
+>>  H = tf([1], [1,1])
+H =
+ 
+    1
+  -----
+  s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> Bagian K (2)
+>> H = tf([2], [1,1])
+H =
+ 
+    2
+  -----
+  s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> - Bagian T (0.2)
+>> H = tf([1], [0.2,1])
+H =
+ 
+      1
+  ---------
+  0.2 s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> - Bagian T (0.5)
+>>  H = tf([1], [0.5,1])
+H =
+ 
+      1
+  ---------
+  0.5 s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> - Bagian T (1)
+>>  H = tf([1], [1,1])
+H =
+ 
+    1
+  -----
+  s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> - Bagian T (2)
+>> H = tf([1], [2,1])
+H =
+ 
+     1
+  -------
+  2 s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
+
+>> - Bagian T (4)
+>> H = tf([1], [4,1])
+H =
+ 
+     1
+  -------
+  4 s + 1
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(H)
+>> grid on
 
 >> % --- NOMOR 7 ---
+>> a = [ 0 1; -6 -2 ];
+b = [ 0 0; 8 4 ];
+c = [ 6 5 ];
+d = [ 7 0 ];
+>> sys = ss(a, b, c, d)
+sys =
+ 
+  A = 
+       x1  x2
+   x1   0   1
+   x2  -6  -2
+ 
+  B = 
+       u1  u2
+   x1   0   0
+   x2   8   4
+ 
+  C = 
+       x1  x2
+   y1   6   5
+ 
+  D = 
+       u1  u2
+   y1   7   0
+ 
+Continuous-time state-space model.
+Model Properties
+>> tf = tf(sys)
+tf =
+ 
+  From input 1 to output:
+  7 s^2 + 54 s + 90
+  -----------------
+    s^2 + 2 s + 6
+ 
+  From input 2 to output:
+    20 s + 24
+  -------------
+  s^2 + 2 s + 6
+ 
+Continuous-time transfer function.
+Model Properties
+>> step(sys)
+>> grid on
+
 
 >> % --- NOMOR 8 ---
+g = 9.81;
+m = 8;
+r = 5;
+b = 10;
+a = [ 0 1; -g/r -b/m*r^2]
+a =
+
+         0    1.0000
+   -1.9620  -31.2500
+
+>> B = [ 0; 0 ];
+c = [ 0 0; 0 0 ];
+d = [ 0; 0] ;
+
+>> sys = ss(a,B,c,d)
+sys =
+ 
+  A = 
+           x1      x2
+   x1       0       1
+   x2  -1.962  -31.25
+ 
+  B = 
+       u1
+   x1   0
+   x2   0
+ 
+  C = 
+       x1  x2
+   y1   0   0
+   y2   0   0
+ 
+  D = 
+       u1
+   y1   0
+   y2   0
+ 
+Continuous-time state-space model.
+Model Properties
+>> step(sys)
+>> grid on
 
 >> % --- NOMOR 9 ---
